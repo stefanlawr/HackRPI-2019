@@ -1,4 +1,4 @@
-![HackRPI 2019](https://hackrpi.com/assets/squarewhite.png)
+![HackRPI 2019](https://i.imgur.com/X89Vj4n.png)
 
 # Project Name
 
