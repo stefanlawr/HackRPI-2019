@@ -9,6 +9,7 @@ import { InternshipsComponent } from './campus-hub/internships/internships.compo
 import { ScholarshipsComponent } from './campus-hub/scholarships/scholarships.component';
 import { JobsComponent } from './campus-hub/jobs/jobs.component';
 import { ClubsComponent } from './campus-hub/clubs/clubs.component';
+import { PageNotFoundComponent } from './campus-hub/page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ClubsComponent } from './campus-hub/clubs/clubs.component';
     InternshipsComponent,
     ScholarshipsComponent,
     JobsComponent,
-    ClubsComponent
+    ClubsComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
