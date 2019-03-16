@@ -10,6 +10,6 @@ Our application is built using POSTGRESQL, Flask, and Angular 7. We are utilizin
 
 ## Collaborators
 
-[Stefan Strauch](mailto:%20sstrauc1@ramapo.edu)
+[Stefan Strauch](mailto:%20sstrauc1@ramapo.edu) - Frontend developer
 
-[Daniel Schnoll](mailto:%20schnod@rpi.edu)
+[Daniel Schnoll](mailto:%20schnod@rpi.edu) - Backend and Database developer
