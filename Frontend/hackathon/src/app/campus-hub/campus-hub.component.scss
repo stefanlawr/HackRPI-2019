@@ -1,0 +1,28 @@
+.campus-hub {
+  .card {
+    width: 65%;
+    margin: 0 auto 1.5rem auto;
+
+    &-title {
+      text-align: center;
+    }
+
+    h5 {
+      font-size: 1.6rem !important;
+      font-weight: 600 !important;
+    }
+
+    &--link {
+      width: 80%;
+      display: flex;
+      justify-content: center;
+      margin: 1rem auto auto auto;
+    }
+  }
+
+  .btn {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: 1.6rem;
+  }
+}

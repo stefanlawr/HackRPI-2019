@@ -1,0 +1,24 @@
+<div class="campus-hub">
+  <div class="card card-body" *ngFor="let section of sections">
+    <h5 class="card-title"> {{ section.sectionName }}</h5>
+    <div *ngFor="let link of section.links">
+      <a *ngIf="link.disabled; else activeLink" class="card--link btn btn-secondary disabled" role="button">
+        {{ link.linkName}}
+      </a>
+
+      <ng-template #activeLink>
+        <a routerLink="{{ link.route }}" class="card--link btn btn-primary" role="button"> {{ link.linkName }}</a>
+      </ng-template>
+
+    </div>
+  </div>
+  <!-- <div class="card card-body">
+    <h5 class="card-title"> Test Title </h5>
+    <hr>
+    <div>
+      <a class="card--link btn btn-secondary disabled" role="button">
+        Button Name
+      </a>
+    </div>
+  </div> -->
+</div>
