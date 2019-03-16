@@ -13,32 +13,23 @@ export interface SectionLink {
 export const SECTIONS: Section[] = [
   {
     sectionName: 'Internships',
-    links: [
-      {
-        linkName: 'View Internships',
-        route: '/internships/view',
-        disabled: true
-      },
-    ]
+    links:
+        [{linkName: 'View Internships', route: '/internships', disabled: false}]
   },
   {
     sectionName: 'Scholarships',
-    links: [{
-      linkName: 'View Scholarships',
-      route: '/scholarships/view',
-      disabled: true
-    }]
+    links: [
+      {linkName: 'View Scholarships', route: '/scholarships', disabled: false}
+    ]
   },
   {
     sectionName: 'Jobs',
-    links: [{linkName: 'View Jobs', route: '/jobs/view', disabled: true}]
+    links: [{linkName: 'View Jobs', route: '/jobs', disabled: false}]
   },
   {
     sectionName: 'Clubs and Activities',
-    links: [{
-      linkName: 'View Clubs and Activities',
-      route: '/jobs/view',
-      disabled: true
-    }]
+    links: [
+      {linkName: 'View Clubs and Activities', route: '/clubs', disabled: false}
+    ]
   }
 ];
