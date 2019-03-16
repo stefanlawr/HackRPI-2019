@@ -1,6 +1,6 @@
 ![HackRPI 2019](https://i.imgur.com/X89Vj4n.png)
 
-# Campus Hub
+# Campus Hub 🏫
 
 Campus Hub is an application designed to act as a dashboard for clubs, jobs, scholarships and various other activities around campus. The application will support multiple schools as long as they are registered for the service.
 
