@@ -1,13 +1,15 @@
 ![HackRPI 2019](https://i.imgur.com/X89Vj4n.png)
 
-# Project Name
+# Campus Hub
 
-Brief Description of what the project will do
+Campus Hub is an application designed to act as a dashboard for clubs, jobs, scholarships and various other activities around campus. The application will support multiple schools as long as they are registered for the service.
 
-Brief Description of tech stack used
+## Tech Stack
+
+Our application is built using POSTGRESQL, Flask, and Angular 7. We are utilizing Bootstrap 4 and SCSS for styling.
 
 ## Collaborators
 
 [Stefan Strauch](mailto:%20sstrauc1@ramapo.edu)
 
-Daniel Schnoll
+[Daniel Schnoll](mailto:%20schnod@rpi.edu)
