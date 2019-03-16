@@ -23,7 +23,7 @@ class Users(db.Model):
 	last_name = db.Column(db.Unicode)
 	email = db.Column(db.Unicode)
 	password = db.Column(db.Unicode)
-	school_id = db.Column(db.Integer)
+	s_id = db.Column(db.Integer)
 
 	def json(self):
 		return {"first_name" : self.first_name, "last_name" : self.last_name, "email" : self.email, "school_id" : self.school_id}
