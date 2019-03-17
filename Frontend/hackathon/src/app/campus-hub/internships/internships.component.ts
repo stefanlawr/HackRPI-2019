@@ -19,7 +19,9 @@ export class InternshipsComponent implements OnInit {
 
   private getInternshipList() {
     this.internshipService.getInternships().subscribe((res) => {
+      console.log(res);
       res.resultSet.forEach((item: Internship) => {
+        console.log(item);
         this.event.push(item);
       });
     });
