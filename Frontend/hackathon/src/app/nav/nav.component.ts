@@ -10,7 +10,7 @@ import { DataService } from './../services/data.service';
   styleUrls: ['./nav.component.scss']
 })
 export class NavComponent implements OnInit {
-  student: User;
+  student: User = { first_name: '', last_name: '' };
 
   // constructor() {}
   constructor(private data: DataService) {}
