@@ -1,9 +1,9 @@
-import {HttpClient} from '@angular/common/http';
-import {Injectable} from '@angular/core';
-import {Observable} from 'rxjs';
-import {baseUrl, httpOption} from 'src/app/models/user';
+import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { baseUrl, httpOption } from 'src/app/models/user';
 
-@Injectable({providedIn: 'root'})
+@Injectable({ providedIn: 'root' })
 export class InternshipService {
   constructor(private http: HttpClient) {}
 
