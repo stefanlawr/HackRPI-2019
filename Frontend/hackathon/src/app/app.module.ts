@@ -10,6 +10,7 @@ import { ScholarshipsComponent } from './campus-hub/scholarships/scholarships.co
 import { JobsComponent } from './campus-hub/jobs/jobs.component';
 import { ClubsComponent } from './campus-hub/clubs/clubs.component';
 import { PageNotFoundComponent } from './campus-hub/page-not-found/page-not-found.component';
+import { StudentsComponent } from './campus-hub/students/students.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { PageNotFoundComponent } from './campus-hub/page-not-found/page-not-foun
     ScholarshipsComponent,
     JobsComponent,
     ClubsComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    StudentsComponent
   ],
   imports: [
     BrowserModule,

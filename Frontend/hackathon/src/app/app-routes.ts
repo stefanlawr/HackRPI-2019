@@ -6,6 +6,7 @@ import {InternshipsComponent} from './campus-hub/internships/internships.compone
 import {JobsComponent} from './campus-hub/jobs/jobs.component';
 import {PageNotFoundComponent} from './campus-hub/page-not-found/page-not-found.component';
 import {ScholarshipsComponent} from './campus-hub/scholarships/scholarships.component';
+import {StudentsComponent} from './campus-hub/students/students.component';
 
 export const routes: Routes = [{
   path: '',
@@ -15,6 +16,7 @@ export const routes: Routes = [{
     {path: 'scholarships', component: ScholarshipsComponent},
     {path: 'jobs', component: JobsComponent},
     {path: 'clubs', component: ClubsComponent},
+    {path: 'students', component: StudentsComponent},
     {path: '**', component: PageNotFoundComponent},
   ]
 }];
