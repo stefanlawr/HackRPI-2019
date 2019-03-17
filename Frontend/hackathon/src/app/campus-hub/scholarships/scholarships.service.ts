@@ -4,11 +4,11 @@ import { Observable } from 'rxjs';
 import { baseUrl } from 'src/app/models/user';
 
 @Injectable({ providedIn: 'root' })
-export class InternshipService {
+export class ScholarshipsService {
   constructor(private http: HttpClient) {}
 
   // TODO: Pass eventIds to get_user instead of hardcoded number
-  getInternships(): Observable<any> {
-    return this.http.get<any>(`${baseUrl}/campus/1/internships`);
+  getScholarships(): Observable<any> {
+    return this.http.get<any>(`${baseUrl}/campus/1/scholarships`);
   }
 }

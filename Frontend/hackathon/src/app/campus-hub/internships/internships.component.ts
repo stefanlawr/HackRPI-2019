@@ -1,7 +1,7 @@
-import {Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
-import {Internship} from './internship.model';
-import {InternshipService} from './internship.service';
+import { Internship } from './internship.model';
+import { InternshipService } from './internship.service';
 
 @Component({
   selector: 'app-internships',
@@ -10,8 +10,6 @@ import {InternshipService} from './internship.service';
 })
 export class InternshipsComponent implements OnInit {
   event: Internship[] = [];
-  item: Internship[] = [];
-  i: number;
 
   constructor(private internshipService: InternshipService) {}
 
@@ -21,17 +19,9 @@ export class InternshipsComponent implements OnInit {
 
   private getInternshipList() {
     this.internshipService.getInternships().subscribe(res => {
-      console.log(res);
-
       for (const results of res) {
         this.event.push(results);
       }
-
-      // res.Results.forEach(item => {
-      //   this.event.push(item);
-      // });
-      // console.log(res[this.i]);
-      // this.event.push(res[1]);
     });
   }
 }
