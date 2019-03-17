@@ -1,7 +1,7 @@
-import {Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
-import {Internship} from './internship.model';
-import {InternshipService} from './internship.service';
+import { Internship } from './internship.model';
+import { InternshipService } from './internship.service';
 
 @Component({
   selector: 'app-internships',
@@ -20,11 +20,7 @@ export class InternshipsComponent implements OnInit {
 
   private getInternshipList() {
     this.internshipService.getInternships().subscribe(res => {
-      this.item = res[1];
-      console.log('item', this.item);
-      console.log('res[0]', res[0]);
-      console.log('res[_t_id]', res[`e_t_id`]);
-      this.event.push(res[0]);
+      this.event.push(res[1]);
     });
   }
 }
