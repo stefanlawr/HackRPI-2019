@@ -13,16 +13,18 @@ export class DataService {
 
   // TODO: Pass userID to get_user instead of hardcoded number
   getUser(): Observable<User> {
-    if (!sessionStorage.getItem('user')) {
-      this.http.get<User>(`${baseUrl}/get_user/5`, httpOption)
-          .subscribe(res => {
-            sessionStorage.setItem('user', JSON.stringify(res));
-          });
+    // if (!sessionStorage.getItem('user')) {
+    //   this.http.get<User>(`${baseUrl}/get_user/5`, httpOption)
+    //       .subscribe(res => {
+    //         sessionStorage.setItem('user', JSON.stringify(res));
+    //       });
 
-      return this.http.get<User>(`${baseUrl}/get_user/5`, httpOption)
-          .pipe(catchError(handleError('DATA: getUser()', {} as User)));
-    }
+    //   return this.http.get<User>(`${baseUrl}/get_user/5`, httpOption)
+    //       .pipe(catchError(handleError('DATA: getUser()', {} as User)));
+    // }
 
-    return of(JSON.parse(sessionStorage.getItem('user')) as User);
+    // return of(JSON.parse(sessionStorage.getItem('user')) as User);
+    return this.http.get<User>(`${baseUrl}/get_user/5`, httpOption)
+        .pipe(catchError(handleError('DATA: getUser()', {} as User)));
   }
 }
