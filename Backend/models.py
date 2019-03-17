@@ -41,20 +41,22 @@ class School(db.Model):
 
 class Events(db.Model):
 
-	def __init__(self, e_t_id, s_id, name, location):
+	def __init__(self, e_t_id, s_id, name, location, description):
 		self.e_t_id = e_t_id
 		self.s_id = s_id
 		self.name = name
 		self.location = location
+		self.description = description
 
 	e_id = db.Column(db.Integer, primary_key=True, nullable=False) 
 	e_t_id = db.Column(db.Integer, db.ForeignKey('event_types.e_t_id'))
 	s_id = db.Column(db.Integer, db.ForeignKey('school.s_id'))
 	name = db.Column(db.Unicode)
 	location = db.Column(db.Unicode)
+	description = db.Column(db.Unicode)
 
 	def json(self):
-		return{"e_id" : self.e_id, "e_t_id": self.e_t_id, "s_id": self.s_id, "name":self.name, "location": self.location}
+		return{"e_id" : self.e_id, "e_t_id": self.e_t_id, "s_id": self.s_id, "name":self.name, "location": self.location, "description": self.description}
 
 class EventTypes(db.Model):
 
