@@ -30,13 +30,14 @@ def getEvents(s_id, name):
     eventTypeID = getEventID(name)
     allEvents = Events.query.filter_by(s_id=int(s_id), e_t_id=int(eventTypeID)).all()
 
-    events = {}
+    events = []
     for event in allEvents:
-        events[event.e_id] = event.json()
+        events.append(event.json())
     return jsonify(events)
     
 
 def getEventID(name):
     eventType = EventTypes.query.filter_by(name=name).first()
+    print(eventType)
     return eventType.e_t_id
 
