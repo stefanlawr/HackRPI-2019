@@ -1,5 +1,5 @@
 from app import app, db, bcrypt
-from models import Users
+from models import Users, School
 from flask import request, abort, jsonify
 from sqlalchemy import func
 import json
@@ -27,11 +27,26 @@ def login():
 
 # Primary route for account creation
 # Accepts a user email and password, salts and queries DB
+# Also handles the creation of a new School
 @app.route("/signup", methods=['POST'])
 def signup():
     request_json = request.json
     response = ""
     try:
+        # Checks for existence of school in DB
+        new_school = request_json["s_id"]
+        school = School.query.filter_by(name=new_school).first()
+
+        # School doesn't exist
+        if not school:
+            print("Creating new School entity")
+            s_id = createSchool(request_json)
+            request_json["s_id"] = s_id # replaces the school name with the associated id
+        
+        else:
+            print("School exists, proceeding")
+            request_json["s_id"] = school.s_id
+
         new_email = request_json["email"]
         user = Users.query.filter_by(email=new_email).first()
 
@@ -66,4 +81,14 @@ def createUser(u_info):
 @app.route("/get_user/<u_id>")
 def getUser(u_id):
 	requested_user = Users.query.filter_by(u_id=int(u_id)).first()
-	return "requested user information: " + requested_user.first_name + " " + requested_user.last_name
+	return "requested user information: " + requested_user.first_name + " " + requested_user.last_name + " " + requested_user.email
+
+'''
+######## SCHOOL FUNCTIONS ########
+'''
+
+def createSchool(s_info):
+    newSchool = School(s_info["s_id"])
+    db.session.add(newSchool)
+    db.session.commit()
+    return newSchool.s_id
