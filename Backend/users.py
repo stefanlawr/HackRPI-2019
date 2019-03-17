@@ -54,7 +54,6 @@ def signup():
 
     return response
 
-
 # Function to create a new User in the db
 # Helper function in signup function
 def createUser(u_info):
