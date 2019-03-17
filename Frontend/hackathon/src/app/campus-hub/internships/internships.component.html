@@ -3,7 +3,7 @@
     <h5 class="card-title"> Internships </h5>
     <hr>
 
-    <div class="entry" *ngFor="let internship of event">
+    <div class="entry" *ngFor="let internship of event | keyvalue">
       <div class="row">
         <div class="col-4" style="display: flex; align-items: center;"> {{internship.name}}</div>
         <div class="col-6" style="display: flex; align-items: center;"> {{internship.description}} </div>
