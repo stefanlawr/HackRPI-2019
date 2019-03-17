@@ -1,8 +1,8 @@
-import {Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
-import {User} from '../models/user';
+import { User } from '../models/user';
 
-import {DataService} from './../services/data.service';
+import { DataService } from './../services/data.service';
 
 @Component({
   selector: 'app-nav',
@@ -12,12 +12,12 @@ import {DataService} from './../services/data.service';
 export class NavComponent implements OnInit {
   student: User;
 
-  constructor() {}
-  // constructor(private data: DataService) {}
+  // constructor() {}
+  constructor(private data: DataService) {}
 
   ngOnInit() {
-    // this.data.getUser().subscribe(res => {
-    //   this.student = res;
-    // });
+    this.data.getUser().subscribe(res => {
+      this.student = res;
+    });
   }
 }
