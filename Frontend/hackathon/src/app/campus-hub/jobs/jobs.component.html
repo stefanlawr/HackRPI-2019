@@ -1,3 +1,17 @@
-<p>
-  jobs works!
-</p>
+<div class="campus-hub">
+  <div class="card card-body shadow-sm">
+    <h5 class="card-title"> Jobs </h5>
+    <hr>
+
+    <div class="entry" *ngFor="let jobs of event">
+      <div class="row">
+        <div class="col-4" style="display: flex; align-items: center;"> {{jobs.name}}</div>
+        <div class="col-6" style="display: flex; align-items: center;"> {{jobs.description}} </div>
+        <div class="col-2" style="text-align: right;">
+          <button class="btn btn-danger"> More Info</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
