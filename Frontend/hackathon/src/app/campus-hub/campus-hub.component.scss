@@ -1,3 +1,5 @@
+@import '../../styles.scss';
+
 .campus-hub {
   .card {
     width: 65%;
@@ -24,5 +26,11 @@
     padding-top: 1rem;
     padding-bottom: 1rem;
     font-size: 1.6rem;
+  }
+}
+
+@media screen and (min-width: $sm) {
+  .card {
+    width: 80%;
   }
 }
