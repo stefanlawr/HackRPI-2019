@@ -1,3 +1,17 @@
-<p>
-  clubs works!
-</p>
+<div class="campus-hub">
+  <div class="card card-body shadow-sm">
+    <h5 class="card-title"> Clubs </h5>
+    <hr>
+
+    <div class="entry" *ngFor="let clubs of event">
+      <div class="row">
+        <div class="col-4" style="display: flex; align-items: center;"> {{clubs.name}}</div>
+        <div class="col-6" style="display: flex; align-items: center;"> {{clubs.description}} </div>
+        <div class="col-2" style="text-align: right;">
+          <button class="btn btn-danger"> More Info</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
