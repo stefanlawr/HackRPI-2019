@@ -12,8 +12,7 @@ import json
 # Accepts a user email and password, salts and queries DB
 @app.route("/login", methods=['POST'])
 def login():
-    request_json = request.json 
-    print(request_json)
+    request_json = request.json
     email = request_json["email"]
     password = request_json["password"]
     
@@ -34,14 +33,14 @@ def signup():
     response = ""
     try:
         new_email = request_json["email"]
-        client = Users.query.filter_by(email=new_email).first()
+        user = Users.query.filter_by(email=new_email).first()
 
         # if the client is already registered, abort
-        if client:
+        if user:
             return abort(400, {"User already exists. Please try a different email"})
 
         # generate passoword
-        hashed_pass = bcrypt.generate_password_hash(request_json["password"])
+        hashed_pass = bcrypt.generate_password_hash(request_json["password"]).decode("utf-8")
         request_json["password"] = hashed_pass
         createUser(request_json)
 
@@ -59,11 +58,10 @@ def signup():
 # Function to create a new User in the db
 # Helper function in signup function
 def createUser(u_info):
-	newUser = Users(u_info["fname"], u_info["lname"], u_info["email"], u_info["password"], u_info["school_id"])
-	db.session.add(newUser)
-	db.session.commit()
-
-	return newUser.u_id
+    newUser = Users(u_info["first_name"], u_info["last_name"], u_info["email"], u_info["password"], u_info["s_id"])
+    db.session.add(newUser)
+    db.session.commit()
+    return newUser.u_id
 
 # Retrieves user info
 @app.route("/get_user/<u_id>")

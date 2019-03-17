@@ -8,15 +8,14 @@ import datetime
 
 
 class Users(db.Model):
-	"""Model for the clients tabe"""
 	
 	#on sign_up
-	def __init__(self, first_name, last_name, email, password, school_id):
+	def __init__(self, first_name, last_name, email, password, s_id):
 		self.first_name = first_name
 		self.last_name = last_name
 		self.email = email
 		self.password = password
-		self.school_id = school_id
+		self.s_id = s_id
 
 	u_id = db.Column(db.Integer, primary_key=True, nullable=False)
 	first_name = db.Column(db.Unicode)
@@ -26,7 +25,7 @@ class Users(db.Model):
 	s_id = db.Column(db.Integer)
 
 	def json(self):
-		return {"first_name" : self.first_name, "last_name" : self.last_name, "email" : self.email, "school_id" : self.school_id}
+		return {"first_name" : self.first_name, "last_name" : self.last_name, "email" : self.email, "school_id" : self.s_id}
 
 class School(db.Model):
 
