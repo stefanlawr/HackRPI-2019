@@ -1,10 +1,10 @@
-import {HttpHeaders} from '@angular/common/http';
-import {Observable, of} from 'rxjs';
+import { HttpHeaders } from '@angular/common/http';
+import { Observable, of } from 'rxjs';
 
-export const baseUrl = 'http://localhost:8080/';
+export const baseUrl = 'http://localhost:5000/';
 
 export const httpOption = {
-  headers: new HttpHeaders({'Content-Type': 'applications/json'})
+  headers: new HttpHeaders({ 'Content-Type': 'applications/json' })
 };
 
 export interface User {
@@ -21,5 +21,5 @@ export function handleError<T>(operation = 'operation', result?: T) {
     console.error(`${operation} failed: ${error.message}`);
 
     return of(result as T);
-  }
+  };
 }
