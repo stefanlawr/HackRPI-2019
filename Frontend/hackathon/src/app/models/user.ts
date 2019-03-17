@@ -1,10 +1,10 @@
-import {HttpHeaders} from '@angular/common/http';
-import {Observable, of} from 'rxjs';
+import { HttpHeaders } from '@angular/common/http';
+import { Observable, of } from 'rxjs';
 
 export const baseUrl = 'http://localhost:5000';
 
 export const httpOption = {
-  headers: new HttpHeaders({'Content-Type': 'application/json'})
+  headers: new HttpHeaders({ 'Content-Type': 'application/json' })
 };
 
 export interface User {
