@@ -12,12 +12,14 @@ import {PageNotFoundComponent} from './campus-hub/page-not-found/page-not-found.
 import {ScholarshipsComponent} from './campus-hub/scholarships/scholarships.component';
 import {StudentsComponent} from './campus-hub/students/students.component';
 import {NavComponent} from './nav/nav.component';
+import { AccountComponent } from './campus-hub/account/account.component';
 
 @NgModule({
   declarations: [
     AppComponent, NavComponent, CampusHubComponent, InternshipsComponent,
     ScholarshipsComponent, JobsComponent, ClubsComponent, PageNotFoundComponent,
-    StudentsComponent
+    StudentsComponent,
+    AccountComponent
   ],
   imports: [
     BrowserModule,

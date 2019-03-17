@@ -1,6 +1,6 @@
-import {Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
-import {SECTIONS} from './campus-hub.sections';
+import { SECTIONS } from './campus-hub.sections';
 
 @Component({
   selector: 'app-campus-hub',
@@ -8,7 +8,7 @@ import {SECTIONS} from './campus-hub.sections';
   styleUrls: ['./campus-hub.component.scss']
 })
 export class CampusHubComponent implements OnInit {
-  title = 'Campus Hub';
+  title = 'College Hub';
 
   sections = SECTIONS;
 

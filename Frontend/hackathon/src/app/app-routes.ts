@@ -1,5 +1,6 @@
 import {Routes} from '@angular/router';
 
+import {AccountComponent} from './campus-hub/account/account.component';
 import {CampusHubComponent} from './campus-hub/campus-hub.component';
 import {ClubsComponent} from './campus-hub/clubs/clubs.component';
 import {InternshipsComponent} from './campus-hub/internships/internships.component';
@@ -17,6 +18,7 @@ export const routes: Routes = [{
     {path: 'jobs', component: JobsComponent},
     {path: 'clubs', component: ClubsComponent},
     {path: 'students', component: StudentsComponent},
+    {path: 'account', component: AccountComponent},
     {path: '**', component: PageNotFoundComponent},
   ]
 }];
