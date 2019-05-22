@@ -1,12 +1,33 @@
-.nav {
-  .title {
-    font-size: 1.6rem;
-  }
-}
+nav {
+  margin-bottom: 2rem;
+  background-color: #C22E28;
 
-a:active,
-a:focus {
-  outline: 0;
-  border: none;
-  -moz-outline-style: none;
+  a {
+    font-size: 2rem;
+    font-weight: 600;
+    color: white;
+
+    &:visited {
+      color: white;
+    }
+
+    img {
+      font-size: 2rem;
+      font-weight: 600;
+      color: white;
+      transition: color 500ms linear;
+
+      &:hover {
+        color: gray;
+        transition: color 500ms linear;
+      }
+
+      &:active,
+      :focus {
+        outline: 0;
+        border: none;
+        -moz-outline-style: none;
+      }
+    }
+  }
 }
