@@ -34,7 +34,7 @@ def signup():
     response = ""
     try:
         # Checks for existence of school in DB
-        new_school = request_json["s_id"]
+        new_school = request_json["s_name"]
         school = School.query.filter_by(name=new_school).first()
 
         # School doesn't exist
